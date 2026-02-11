@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Physics Explorer | Nashra Kashaf Husain</title>
+  <meta name="description" content="Interactive educational platform on Modern Physics – Special & General Relativity, Quantum Mechanics, and more.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Modern Physics Explorer</h1>
+    <nav id="main-nav">
+      <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+      <ul id="nav-list">
+        <li><a href="#intro" class="nav-link">Introduction</a></li>
+        <li><a href="#relativity-special" class="nav-link">Special Relativity</a></li>
+        <li><a href="#relativity-general" class="nav-link">General Relativity</a></li>
+        <li><a href="#quantum" class="nav-link">Quantum Mechanics</a></li>
+        <li><a href="#wave-particle" class="nav-link">Wave-Particle Duality</a></li>
+        <li><a href="#photoelectric" class="nav-link">Photoelectric Effect</a></li>
+        <li><a href="#atomic" class="nav-link">Atomic Models</a></li>
+        <li><a href="#mass-energy" class="nav-link">Mass-Energy Equivalence</a></li>
+        <li><a href="#standard-model" class="nav-link">Standard Model</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <input type="text" id="search" placeholder="Search...">
+
+  <main>
+    <section id="intro">
+      <h2>Introduction to Modern Physics</h2>
+    
+      <p>
+        Modern Physics emerged in the early 20th century when classical physics — based on Newtonian mechanics and Maxwell's electromagnetism — could no longer explain phenomena at extremely high speeds, atomic and subatomic scales, or under extreme conditions (such as strong gravity or near absolute zero).
+      </p>
+    
+      <p>
+        This failure triggered two of the greatest scientific revolutions in history:
+      </p>
+    
+      <ul class="points">
+        <li><strong>Relativity</strong> (Albert Einstein, 1905 & 1915): Redefined space, time, and gravity, showing they are not absolute but interconnected and affected by motion and mass.</li>
+        <li><strong>Quantum Mechanics</strong> (Planck, Einstein, Bohr, Heisenberg, Schrödinger, Dirac, 1900–1930s): Revealed that at tiny scales, matter and energy behave in strange, probabilistic ways — not deterministic like classical physics.</li>
+      </ul>
+    
+      <img src="Introduction.png" alt="Bohr model of the atom showing electrons in quantized energy levels (shells)">
+    
+      <p class="des">
+        The Bohr model of the atom (1913): electrons orbit the nucleus in fixed energy levels, jumping between them by absorbing or emitting photons of exact energy.
+      </p>
+    
+      <p><strong>Key milestones in the birth of Modern Physics:</strong></p>
+      <ul class="introPoint">
+        <li>1900: Max Planck introduces the quantum hypothesis to explain black-body radiation</li>
+        <li>1905: Einstein publishes Special Relativity and explains the photoelectric effect (quantum nature of light)</li>
+        <li>1913: Niels Bohr proposes the first quantum model of the atom</li>
+        <li>1915: Einstein completes General Relativity, describing gravity as curvature of spacetime</li>
+        <li>1924–1927: Wave-particle duality (de Broglie) and full development of quantum mechanics (Schrödinger, Heisenberg, Dirac)</li>
+        <li>1927: Heisenberg formulates the Uncertainty Principle</li>
+      </ul>
+    </section>
+
+    <section id="relativity-special">
+      <h2>Special Relativity (1905)</h2>
+    
+      <p>
+        In 1905, Albert Einstein published his theory of <strong>Special Relativity</strong>, which revolutionized our understanding of space, time, and energy. The theory is built on two simple but profound postulates:
+      </p>
+    
+      <ol class="points">
+        <li>The laws of physics are the same in all <strong>inertial frames</strong> (frames moving at constant velocity).</li>
+        <li>The speed of light in vacuum, <strong>c ≈ 3 × 10⁸ m/s</strong>, is constant for all observers, regardless of their motion or the motion of the light source.</li>
+      </ol>
+    
+      <p>
+        These two principles led to surprising and counterintuitive consequences that have been experimentally confirmed countless times.
+      </p>
+    
+      <h3>Key Consequences</h3>
+      <ul class="points">
+        <li><strong>Time Dilation</strong>: Moving clocks run slower compared to a stationary observer.</li>
+        <li><strong>Length Contraction</strong>: Objects moving relative to an observer appear shorter along the direction of motion.</li>
+        <li><strong>Relativistic Mass Increase</strong>: The effective mass of an object increases as it approaches the speed of light (modern view prefers <em>relativistic energy</em>).</li>
+        <li><strong>Mass-Energy Equivalence</strong>: <strong>E = mc²</strong> — mass and energy are interchangeable.</li>
+      </ul>
+    
+      <img src="especial-relativity.png" alt="Diagram illustrating time dilation and length contraction in special relativity with light clocks and moving observers" >
+    
+      <p class="des">
+        This diagram shows the classic light clock thought experiment: a stationary clock (left) vs. a moving clock (right). The moving clock's light path is longer, causing time dilation. Length contraction is also illustrated by the shortened meter stick in the moving frame.
+      </p>
+    
+      <details>
+        <summary>Mathematical Insight (Core Formulas)</summary>
+        <p>
+          <strong>Time Dilation:</strong><br>
+          Δt' = γ Δt  where  γ = 1 / √(1 - v²/c²)<br>
+          (Moving clock runs slower: Δt' > Δt)
+        </p>
+        <p>
+          <strong>Length Contraction:</strong><br>
+          L' = L / γ = L √(1 - v²/c²)<br>
+          (Object appears shorter in the direction of motion)
+        </p>
+        <p>
+          <strong>Relativistic Energy:</strong><br>
+          E = γ m c²  (total energy)<br>
+          Rest energy: E₀ = m c²<br>
+          Kinetic energy: K = (γ - 1) m c²
+        </p>
+        <p>
+          <strong>Lorentz Factor γ:</strong> γ = 1 / √(1 - v²/c²)
+        </p>
+      </details>
+    
+      <p class="des">
+        Real-world proof: GPS satellites must correct for time dilation (their clocks run faster due to high speed and weaker gravity) or GPS would be off by kilometers every day!
+      </p>
+    </section>
+
+    <section id="relativity-general">
+      <h2>General Relativity (1915)</h2>
+    
+      <p>
+        In 1915, Albert Einstein completed his masterpiece: <strong>General Relativity</strong>. This theory replaced Newton's concept of gravity as a force and instead describes gravity as the <strong>curvature of spacetime</strong> caused by mass and energy.
+      </p>
+    
+      <p>
+        In simple terms: massive objects like stars and planets warp the fabric of spacetime around them, much like a heavy ball placed on a stretched rubber sheet. Objects (including light) follow the <strong>straightest possible paths</strong> (called <strong>geodesics</strong>) in this curved spacetime — which we perceive as gravitational attraction.
+      </p>
+    
+      <h3>Key Predictions of General Relativity</h3>
+      <ul class="points">
+        <li><strong>Gravitational Time Dilation</strong>: Clocks run slower in stronger gravitational fields (e.g., closer to Earth’s surface).</li>
+        <li><strong>Gravitational Lensing</strong>: Light bends around massive objects (confirmed during the 1919 solar eclipse).</li>
+        <li><strong>Black Holes</strong>: Regions where spacetime curvature becomes so extreme that nothing, not even light, can escape.</li>
+        <li><strong>Gravitational Waves</strong>: Ripples in spacetime caused by accelerating massive objects (first detected in 2015 by LIGO).</li>
+      </ul>
+    
+      <img src="General-relativity.png" alt="Illustration of spacetime curvature around Earth caused by its mass in General Relativity" >
+           
+
+      <p class="des">
+        <strong>About the image:</strong> This classic diagram shows Earth sitting in the center of a stretched, curved spacetime "fabric." The grid lines represent the flat spacetime without mass; when Earth is placed there, it bends the grid, creating a "well" of curvature. Objects (like satellites or light) follow these curved paths — this is what we experience as gravity.
+      </p>
+    
+      <details>
+        <summary>Real-World Impact & Applications</summary>
+        <p>
+          General Relativity is not just theoretical — it is essential for modern technology:
+          <ul class="points">
+            <li>GPS satellites must correct for both <strong>special relativity</strong> (time dilation from high speed) and <strong>general relativity</strong> (time dilation from weaker gravity at higher altitude) — otherwise, GPS would drift by kilometers every day.</li>
+            <li>Gravitational lensing is used by astronomers to study distant galaxies and dark matter.</li>
+            <li>The detection of gravitational waves in 2015 opened a new way to observe the universe (black hole mergers, neutron stars).</li>
+          </ul>
+        </p>
+      </details>
+    </section>
+
+<section id="quantum">
+    <h2>Quantum Mechanics</h2>
+  
+    <p>
+      Quantum Mechanics is the fundamental theory that describes the behavior of matter and energy at atomic and subatomic scales. Unlike classical physics, it reveals a strange, probabilistic world where particles can act like waves, exist in multiple states at once, and influence each other instantly over vast distances.
+    </p>
+  
+    <h3>Key Principles of Quantum Mechanics</h3>
+    <ul class="points">
+      <li><strong>Quantization of Energy</strong>: Energy comes in discrete packets (quanta) rather than continuous values (e.g., electrons in atoms can only occupy specific energy levels).</li>
+      <li><strong>Wave-Particle Duality</strong>: Particles like electrons and photons behave both as particles (localized) and as waves (spread out), depending on how they are observed.</li>
+      <li><strong>Uncertainty Principle</strong> (Heisenberg, 1927): It is impossible to know both the exact position and exact momentum of a particle at the same time — the more precisely one is known, the less precise the other becomes.</li>
+      <li><strong>Superposition</strong>: A quantum system can exist in multiple states simultaneously until measured (e.g., Schrödinger's cat is both alive and dead until observed).</li>
+      <li><strong>Quantum Entanglement</strong>: When two particles become linked, the state of one instantly affects the other, no matter how far apart they are ("spooky action at a distance" — Einstein).</li>
+    </ul>
+  
+    <div class="animation-demo" style="position: relative; height: 200px; background: #111; border-radius: 8px; overflow: hidden; margin: 1.5em 0;">
+      <div class="particle" style="top: 30%; left: 10%; animation-delay: 0s;"></div>
+      <div class="particle" style="top: 50%; left: 20%; animation-delay: 2s;"></div>
+      <div class="particle" style="top: 70%; left: 30%; animation-delay: 4s;"></div>
+    </div>
+  
+    <p class="des">
+      <strong>About the animation:</strong> The moving "particles" represent the wave-like nature of quantum objects — they spread out and interfere like waves, not like solid classical particles.
+    </p>
+  
+    <p>
+      Quantum mechanics underpins all modern technology involving atoms and electrons: semiconductors, lasers, LEDs, MRI machines, solar cells, and the emerging field of quantum computing.
+    </p>
+  
+    <details>
+      <summary>Schrödinger's Equation (The Heart of Quantum Mechanics)</summary>
+      <p>
+        <strong>i ħ ∂ψ/∂t = Ĥ ψ</strong><br>
+        This is the time-dependent Schrödinger equation. It describes how the quantum wave function (ψ) evolves over time. The wave function contains all possible information about the particle — but only probabilities, not certainties.
+      </p>
+      <p>
+        When a measurement is made, the wave function "collapses" to one definite state — this is the famous "measurement problem" still debated in quantum foundations.
+      </p>
+    </details>
+  </section>
+
+  <section id="wave-particle">
+    <h2>Wave-Particle Duality</h2>
+  
+    <p>
+      One of the most mind-bending ideas in quantum mechanics is that particles like electrons, photons, and even atoms can behave <strong>both as particles and as waves</strong>, depending on how we observe them.
+    </p>
+  
+    <p>
+      This strange dual nature was first proposed by Louis de Broglie in 1924 and has been confirmed by countless experiments, most famously the <strong>double-slit experiment</strong>.
+    </p>
+  
+    <h3>The Double-Slit Experiment</h3>
+    <ul class="points">
+      <li>When particles (e.g., electrons or photons) are fired one at a time through two slits and <strong>not observed</strong>, they create an <strong>interference pattern</strong> on the screen — exactly as if they were waves passing through both slits simultaneously.</li>
+      <li>When we try to detect <strong>which slit</strong> each particle goes through, the interference pattern disappears, and we see two simple bands — as if they were classical particles.</li>
+    </ul>
+  
+    <p>
+      This shows that the act of <strong>measurement</strong> fundamentally changes the behavior of quantum objects.
+    </p>
+  
+    <img src="wave-partical-duality.png" alt="Electron wave functions and probability densities showing wave-like interference patterns">
+  
+    <p class="des">
+      <strong>About the image:</strong> This diagram illustrates the wave functions (ψ) and probability densities (|ψ|²) for electrons in the lowest energy states. The oscillating patterns and nodal lines visually represent the wave nature of electrons, similar to standing waves on a string — a direct result of wave-particle duality.
+    </p>
+  
+    <details>
+      <summary>De Broglie Hypothesis (1924)</summary>
+      <p>
+        Louis de Broglie proposed that every particle has a wave nature, with a wavelength given by:<br>
+        <strong>λ = h / p</strong><br>
+        where <strong>h</strong> is Planck’s constant (6.626 × 10⁻³⁴ J·s) and <strong>p</strong> is the particle’s momentum (p = m v).
+      </p>
+      <p>
+        This formula applies to all matter — even large objects have a tiny wavelength, but it only becomes noticeable at atomic scales.
+      </p>
+    </details>
+  
+    <p class="des">
+      Fun fact: Wave-particle duality is the basis of electron microscopes, which use electron waves to achieve much higher resolution than light microscopes.
+    </p>
+  </section>
+
+  <section id="photoelectric">
+    <h2>Photoelectric Effect</h2>
+  
+    <p>
+      The photoelectric effect is a phenomenon where light shining on a metal surface ejects electrons from it — but only if the light has a high enough frequency. This was one of the first key experiments that showed light behaves as particles (photons), not just as a wave.
+    </p>
+  
+    <p>
+      Classical wave theory predicted that any frequency of light should eventually eject electrons by accumulating energy, but experiments showed this was wrong. In 1905, Albert Einstein explained it by proposing that light consists of discrete packets of energy called <strong>photons</strong>, each with energy:
+    </p>
+  
+    <p class="highlight">
+      E = h f
+    </p>
+  
+    <p>
+      where <strong>h</strong> is Planck’s constant and <strong>f</strong> is the frequency of the light.
+    </p>
+  
+    <h3>Key Observations of the Photoelectric Effect</h3>
+    <ul class="points">
+      <li>Electrons are ejected only if the frequency of light is above a <strong>threshold frequency (f₀)</strong> — no matter how intense the light is.</li>
+      <li>The kinetic energy of the ejected electrons increases linearly with frequency (above f₀), not with intensity.</li>
+      <li>The number of ejected electrons increases with light intensity (more photons = more electrons kicked out).</li>
+    </ul>
+  
+    <img src="photo-electric-effect.png" alt="Diagram of the photoelectric effect: light (photons) striking a metal surface and ejecting electrons" width="70%">
+  
+    <p class="des">
+      <strong>About the image:</strong> This illustration shows a beam of light (or X-rays in this case) hitting a metal target. Photons with sufficient energy knock out electrons from the surface, demonstrating the particle nature of light. The setup is typical of experiments that confirmed Einstein’s photon theory.
+    </p>
+  
+    <details>
+      <summary>Key Equation</summary>
+      <p>
+        <strong>Maximum kinetic energy of ejected electron:</strong><br>
+        K_max = h f - φ<br>
+        where <strong>φ</strong> is the <strong>work function</strong> — the minimum energy needed to eject an electron from the metal.
+      </p>
+      <p>
+        If h f < φ, no electrons are ejected — no matter how intense the light.
+      </p>
+    </details>
+  
+    <p class="des">
+      Real-world impact: The photoelectric effect is the basis for solar cells, digital cameras, night-vision devices, and many photodetectors.
+    </p>
+  </section>
+
+  <section id="atomic">
+    <h2>Atomic Models</h2>
+  
+    <p>
+      Our understanding of the atom has evolved dramatically over time. Early models were replaced as new evidence emerged, leading to the modern quantum mechanical picture.
+    </p>
+  
+    <h3>Key Stages in the Evolution of Atomic Models</h3>
+    <ul class="points">
+      <li><strong>Rutherford Model (1911)</strong>: Atom has a tiny, dense, positively charged nucleus surrounded by mostly empty space with orbiting electrons. (Planetary model — but unstable because electrons should spiral into the nucleus.)</li>
+      <li><strong>Bohr Model (1913)</strong>: Electrons orbit the nucleus in fixed, circular paths (orbits) at specific quantized energy levels. Electrons jump between levels by absorbing or emitting photons of exact energy.</li>
+      <li><strong>Quantum Mechanical Model (1920s–1930s)</strong>: Electrons do not follow fixed orbits. Instead, they exist in <strong>probability clouds</strong> (orbitals) described by wave functions. The position and momentum are governed by probabilities, not definite paths.</li>
+    </ul>
+  
+    <img src="atomic-model.png" alt="Bohr model of a nitrogen atom showing electrons in quantized energy levels">
+  
+    <p class="des">
+      <strong>About the image:</strong> This diagram shows the Bohr model applied to a nitrogen atom. Electrons are shown orbiting the nucleus in specific circular energy levels (shells). The model was a major step forward but was later replaced by the more accurate quantum mechanical model, where electrons are described by probability clouds rather than fixed orbits.
+    </p>
+  
+    <details>
+      <summary>Quantum Numbers (Describing Electron Orbitals)</summary>
+      <p>
+        In the modern quantum mechanical model, the state of each electron is described by four quantum numbers:
+        <ul class="points">
+          <li><strong>n</strong> (principal quantum number): Determines the energy level and size of the orbital (n = 1, 2, 3, …)</li>
+          <li><strong>l</strong> (azimuthal quantum number): Determines the shape of the orbital (l = 0 to n-1; s, p, d, f)</li>
+          <li><strong>m_l</strong> (magnetic quantum number): Determines the orientation of the orbital in space (m_l = -l to +l)</li>
+          <li><strong>m_s</strong> (spin quantum number): Describes the electron’s intrinsic spin (+½ or –½)</li>
+        </ul>
+      </p>
+      <p>
+        These numbers uniquely identify each electron in an atom, following the Pauli exclusion principle (no two electrons can have the same set of four quantum numbers).
+      </p>
+    </details>
+  
+    <p class="des">
+      Real-world impact: The quantum mechanical model explains chemical bonding, spectroscopy, and is essential for technologies like semiconductors and quantum computing.
+    </p>
+  </section>
+
+  <section id="mass-energy">
+    <h2>Mass-Energy Equivalence</h2>
+  
+    <p>
+      One of the most famous equations in physics, derived by Albert Einstein in 1905 as part of special relativity, is:
+    </p>
+  
+    <p class="highlight">
+      E = m c²
+    </p>
+  
+    <p>
+      This equation shows that <strong>mass and energy are interchangeable</strong> — mass is a form of stored energy, and energy can be converted into mass (and vice versa).
+    </p>
+  
+    <h3>Key Implications</h3>
+    <ul class="points">
+      <li>In nuclear reactions, a tiny amount of mass is converted into a huge amount of energy (because c² is enormous: ≈ 9 × 10¹⁶ m²/s²).</li>
+      <li>Explains why nuclear fission and fusion release so much energy.</li>
+      <li>Particles can be created from energy or annihilate into energy (e.g., electron-positron pair production and annihilation).</li>
+      <li>The rest energy of any object is E₀ = m c² — even a stationary object has energy due to its mass.</li>
+    </ul>
+  
+    <img src="mass-energy.png" alt="Comparison of classical and modern physics showing mass-energy equivalence"> 
+  
+    <p class="des">
+      <strong>About the image:</strong> This diagram contrasts classical Newtonian physics with modern relativistic physics. It illustrates how mass and energy are equivalent in the modern view, with examples like nuclear reactions where a small mass loss produces enormous energy output.
+    </p>
+  
+    <details>
+      <summary>Applications & Real-World Examples</summary>
+      <p>
+        Mass-energy equivalence is the foundation of:
+        <ul class="points">
+          <li>Nuclear power plants (fission of uranium releases energy from mass conversion)</li>
+          <li>Atomic and hydrogen bombs (fission and fusion)</li>
+          <li>Particle accelerators (e.g., LHC at CERN, where energy creates new particles)</li>
+          <li>Stellar energy (the Sun shines by fusing hydrogen into helium, converting mass to energy)</li>
+        </ul>
+      </p>
+    </details>
+  
+    <p class="des">
+      Fun fact: The Sun converts about 4 million tons of mass into energy every second — yet it will shine for billions of years because of the enormous amount of mass it contains.
+    </p>
+  </section>
+
+  <section id="standard-model">
+    <h2>The Standard Model of Particle Physics</h2>
+  
+    <p>
+      The <strong>Standard Model</strong> is the most successful and complete theory we have of the fundamental particles and forces that make up the universe (except gravity, which is described by General Relativity).
+    </p>
+  
+    <p>
+      It describes:
+    </p>
+  
+    <ul class="points">
+      <li><strong>17 fundamental particles</strong>: 12 matter particles (quarks and leptons) + 5 force-carrying particles (bosons)</li>
+      <li><strong>Three fundamental forces</strong>: electromagnetic, weak nuclear, and strong nuclear</li>
+      <li>The <strong>Higgs boson</strong>, discovered in 2012, which gives other particles mass through the Higgs field</li>
+    </ul>
+  
+    <img src="last.png" alt="Complete chart of the Standard Model of Particle Physics showing all 17 fundamental particles and interactions"> 
+    <p class="des">
+      <strong>About the image:</strong> This is the official, detailed diagram of the Standard Model. It organizes all 17 fundamental particles: quarks (up, down, charm, strange, top, bottom), leptons (electron, muon, tau, and their neutrinos), and the force carriers (photon, gluons, W⁺/W⁻/Z bosons, and Higgs). The colors and layout make it easy to see the generations and interactions.
+    </p>
+  
+    <details>
+      <summary>Fundamental Particles & Forces</summary>
+      <p>
+        <strong>Matter particles (fermions):</strong>
+        <ul class="points">
+          <li>6 quarks: up, down, charm, strange, top, bottom</li>
+          <li>6 leptons: electron, muon, tau + their neutrinos (electron neutrino, muon neutrino, tau neutrino)</li>
+        </ul>
+      </p>
+      <p>
+        <strong>Force carriers (bosons):</strong>
+        <ul class="points">
+          <li>Photon — carries electromagnetic force</li>
+          <li>Gluons (8 types) — carry strong nuclear force</li>
+          <li>W⁺, W⁻, Z bosons — carry weak nuclear force</li>
+          <li>Higgs boson — gives mass to other particles</li>
+        </ul>
+      </p>
+      <p>
+        The Standard Model explains almost everything we observe — from atoms to stars — but it does not yet include gravity or dark matter.
+      </p>
+    </details>
+  
+    <p class="des">
+      Fun fact: The Large Hadron Collider (LHC) at CERN discovered the Higgs boson in 2012, confirming the last missing piece of the Standard Model.
+    </p>
+  </section>
+  
+  </main>
+
+  <footer>
+    <p>Developed by Nashra Kashaf Husain | © 2025 | Educational Platform</p>
+  </footer>
+
+  <button id="mode-toggle" aria-label="Toggle Theme">🌙</button>
+
+  <script>
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(anchor.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        // Close mobile menu after click
+        const navList = document.getElementById('nav-list');
+        const menuToggle = document.getElementById('menu-toggle');
+        navList.classList.remove('open');
+        menuToggle.textContent = '☰';
+      });
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navList = document.getElementById('nav-list');
+    menuToggle.addEventListener('click', () => {
+      navList.classList.toggle('open');
+      menuToggle.textContent = navList.classList.contains('open') ? '✕' : '☰';
+    });
+
+    // Active section highlighting on scroll
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Live search
+    const search = document.getElementById('search');
+    const sectionsAll = document.querySelectorAll('section');
+    search.addEventListener('input', () => {
+      const term = search.value.toLowerCase();
+      sectionsAll.forEach(sec => {
+        sec.style.display = sec.textContent.toLowerCase().includes(term) ? 'block' : 'none';
+      });
+    });
+
+    // Theme toggle (default dark)
+    const toggle = document.getElementById('mode-toggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      toggle.textContent = document.body.classList.contains('light-mode') ? '🌙' : '☀️';
+    });
+  </script>
+</body>
+</html>
