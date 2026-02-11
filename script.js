@@ -1,61 +1,73 @@
-
-// Smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', e => {
-        e.preventDefault();
-        document.querySelector(anchor.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-        // Close mobile menu after click
-        const navList = document.getElementById('nav-list');
-        const menuToggle = document.getElementById('menu-toggle');
-        navList.classList.remove('open');
-        menuToggle.textContent = '☰';
-      });
-    });
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(anchor.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    // Close mobile menu
+    const navList = document.getElementById('nav-list');
+    const menuToggle = document.getElementById('menu-toggle');
+    navList.classList.remove('open');
+    menuToggle.textContent = '☰';
+  });
+});
 
 // Mobile menu toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const navList = document.getElementById('nav-list');
-    menuToggle.addEventListener('click', () => {
-      navList.classList.toggle('open');
-      menuToggle.textContent = navList.classList.contains('open') ? '✕' : '☰';
-    });
+const menuToggle = document.getElementById('menu-toggle');
+const navList = document.getElementById('nav-list');
+if (menuToggle) {
+  menuToggle.addEventListener('click', () => {
+    navList.classList.toggle('open');
+    menuToggle.textContent = navList.classList.contains('open') ? '✕' : '☰';
+  });
+}
 
-// Active section highlighting on scroll
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
+const observerOptions = {
+  root: null,
+  threshold: 0.6, // Trigger when 60% of the section is visible
+};
 
-    window.addEventListener('scroll', () => {
-      let current = '';
-
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.clientHeight;
-        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-          current = section.getAttribute('id');
-        }
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.getAttribute('id');
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
       });
+    }
+  });
+}, observerOptions);
 
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-          link.classList.add('active');
-        }
-      });
-    });
+document.querySelectorAll('section').forEach(section => observer.observe(section));
 
 // Live search
-    const search = document.getElementById('search');
-    const sectionsAll = document.querySelectorAll('section');
-    search.addEventListener('input', () => {
-      const term = search.value.toLowerCase();
-      sectionsAll.forEach(sec => {
-        sec.style.display = sec.textContent.toLowerCase().includes(term) ? 'block' : 'none';
-      });
-    });
+const search = document.getElementById('search');
+const sectionsAll = document.querySelectorAll('section');
 
-// Theme toggle (default dark)
-    const toggle = document.getElementById('mode-toggle');
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('light-mode');
-      toggle.textContent = document.body.classList.contains('light-mode') ? '🌙' : '☀️';
-    });
+search.addEventListener('input', (e) => {
+  const term = e.target.value.toLowerCase();
+  sectionsAll.forEach(sec => {
+    const isVisible = sec.innerText.toLowerCase().includes(term);
+    sec.classList.toggle('hidden', !isVisible);
+  });
+});
+
+// Theme toggle 
+const toggleBtn = document.getElementById('mode-toggle');
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+  const isLight = document.body.classList.contains('light-mode');
+  toggleBtn.textContent = isLight ? '🌙' : '☀️';
+  
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+});
+
+// Load saved theme on startup
+window.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light-mode');
+    toggleBtn.textContent = '🌙';
+  }
+});
